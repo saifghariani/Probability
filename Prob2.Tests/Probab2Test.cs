@@ -6,26 +6,34 @@ namespace Prob2.Tests
 {
     public class Probab2Test
     {
-        [Theory, AutoData]
-        public void ShouldProbAnd(decimal a, decimal b)
+        [Fact]
+        public void ShouldProbAnd()
         {
+            decimal a = 0.1m;
+            decimal b = 0.2m;
+            decimal expectedResult = 0.02m;
             Probability p = new Probability();
             p.createProb(a, b);
-            Assert.Equal(a*b, p.probAnd());
+            Assert.Equal(expectedResult, p.probAnd());
         }
-        [Theory, AutoData]
-        public void ShouldProbOr(decimal a, decimal b)
+        [Fact]
+        public void ShouldProbOr()
         {
+            decimal a = 0.1m;
+            decimal b = 0.2m;
+            decimal expectedResult = 0.28m;
             Probability p = new Probability();
             p.createProb(a, b);
-            Assert.Equal(a+b-a*b, p.probOr());
+            Assert.Equal(expectedResult, p.probOr());
         }
-        [Theory, AutoData]
-        public void ShouldProbNotA(decimal a)
+        [Fact]
+        public void ShouldProbNotA()
         {
+            decimal expectedResult = 0.9m;
+            decimal a = 0.1m;
             Probability p = new Probability();
             p.createProb(a);
-            Assert.Equal(1-a, p.probNotA());
+            Assert.Equal(expectedResult, p.probNotA());
         }
     }
 }

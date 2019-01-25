@@ -11,14 +11,14 @@ namespace Prob2.Tests
         {
             Probability p = new Probability();
             p.createProb(a, b);
-            Assert.Equal(a * b, p.probAnd());
+            Assert.Equal(a*b, p.probAnd());
         }
         [Theory, AutoData]
         public void ShouldProbOr(decimal a, decimal b)
         {
             Probability p = new Probability();
             p.createProb(a, b);
-            Assert.Equal(a + b - a*b, p.probOr());
+            Assert.Equal(a+b-a*b, p.probOr());
         }
         [Theory, AutoData]
         public void ShouldProbNotA(decimal a)
@@ -27,6 +27,5 @@ namespace Prob2.Tests
             p.createProb(a);
             Assert.Equal(1-a, p.probNotA());
         }
-
     }
 }

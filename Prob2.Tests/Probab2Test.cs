@@ -27,5 +27,6 @@ namespace Prob2.Tests
             p.createProb(a);
             Assert.Equal(1-a, p.probNotA());
         }
+
     }
 }

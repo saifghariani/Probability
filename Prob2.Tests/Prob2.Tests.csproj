@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Prop2\Prop2.csproj" />
+    <ProjectReference Include="..\Prop2\Prob2.csproj" />
   </ItemGroup>
 
 </Project>
